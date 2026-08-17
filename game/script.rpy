@@ -23,6 +23,7 @@ image bg jaguar = Solid("#0a1a0a")     # the jaguar's chamber
 # IMAGE ALIASES — Characters (placeholders)
 # -------------------------------------------------------------------------------------------
 image eleanor_neutral = Solid("#c8a2c8")
+image eleanor_determined = Solid("#c8a2c8")
 image neith_neutral = Solid("#e8d8e8")
 
 # -------------------------------------------------------------------------------------------
@@ -78,6 +79,99 @@ label start:
 
     pause 1.5
 
-    "To be continued..."
+    # --- The descent into the jungle ---
+    scene bg jungle
+    with slow_fade
+
+    "The jungle did not welcome us. It *watched* us."
+
+    "Every step we took, the canopy above seemed to lean closer. The calls of birds had died an hour ago, and the silence that followed was the kind that pressed against the ears."
+
+    show eleanor_neutral at left
+    show neith_neutral at right
+    with dissolve
+
+    e "Neith. The birds stopped."
+
+    n "I know."
+
+    "She did not slow. But I saw her hand tighten on the jade jaguar, and I saw the way her eyes moved—not ahead, but *around*, searching the green dark for something that did not want to be found."
+
+    e "You're scared."
+
+    n "I am *alert*. There is a difference."
+
+    e "There isn't. Not out here."
+
+    "She glanced at me, and for a moment the mask slipped. Under the calm, there was something raw—a fear she had carried for a century, and never once let show."
+
+    n "I have walked the Duat, Eleanor. I have faced the Devourer. I have stood before the scales and watched hearts too heavy to be judged fall into the dark."
+
+    n "But I have never been *hunted*."
+
+    "The words hung in the wet air. And then, from the trees ahead, came a sound that was not a bird, and not a wind."
+
+    "A low, guttural growl. Close. Too close."
+
+    show eleanor_determined at left
+    with dissolve
+
+    e "Neith."
+
+    n "I heard it."
+
+    "We stood back to back in the green dark, the jade jaguar warm between us, and the jungle held its breath."
+
+    "And then the growl came again—closer, and this time it was not alone."
+
+    menu:
+        "Stand your ground — face it together":
+            $ jaguar_trust += 1
+            "I did not run. I stepped forward, putting myself between Neith and the sound, and I drew the small blade I had carried from England."
+            e "Whatever it is, it came for us. Let it come."
+            "Neith moved to stand beside me, not behind me. Her hand found mine, and squeezed."
+            n "Then we face it together."
+            "The growl faltered. Whatever was out there, it had not expected two."
+
+        "Pull Neith back — retreat to the river":
+            "I grabbed Neith's arm and pulled her back toward the water, my heart hammering."
+            e "We're not ready. We don't know what's out there."
+            "She resisted for a moment, then let me pull her. But I saw the disappointment flicker across her face."
+            n "Running from the dark, Eleanor? That is not the woman who unmade a Binding."
+            "The growl followed us, patient, unhurried. It knew we would come back."
+
+    # --- The temple ---
+    "We broke through the treeline into a clearing, and the temple rose before us—black stone, swallowed by vines, its steps slick with a century of rain."
+
+    "At its base, half-buried in the earth, lay a stone jaguar, its mouth open in a silent snarl."
+
+    show neith_neutral at right
+
+    n "The guardian. The first Thorne carved it, to mark the place where the bloodline began."
+
+    e "And to warn people away."
+
+    n "Both."
+
+    "She knelt before the stone jaguar, and I saw her hand tremble as she reached out to touch it."
+
+    n "Eleanor. There is something I have not told you."
+
+    e "What?"
+
+    n "The jade jaguar is not a relic. It is a *key*—and it was not made by the Thorne family."
+
+    "She looked up at me, and in the green dark, her eyes were bright with a fear I had never seen in her."
+
+    n "It was made by the thing the first Thorne made a bargain with. And it has been waiting, all these centuries, for a Thorne to bring it back."
+
+    "The stone jaguar's eyes seemed to glow. And somewhere deep in the temple, something that had been waiting a very long time began to wake."
+
+    scene black
+    with slow_fade
+
+    centered "{size=+6}{color=#d4a373}To be continued...{/color}{/size}"
+
+    pause 1.5
 
     return
