@@ -170,6 +170,113 @@ label start:
     scene black
     with slow_fade
 
+    centered "{size=+6}{color=#d4a373}ACT TWO — THE DESCENT{/color}{/size}"
+
+    pause 1.5
+
+    # --- Entering the temple ---
+    scene bg temple
+    with slow_fade
+
+    "The temple swallowed us whole."
+
+    "The doorway was a mouth of black stone, and the moment we crossed it, the light of the jungle died behind us. The air turned cold and still, and the smell of the green gave way to something older—dust, and blood, and the faint, sweet rot of a thousand years."
+
+    show eleanor_neutral at left
+    show neith_neutral at right
+    with dissolve
+
+    e "Neith. Light."
+
+    "She struck a match. The flame guttered, then steadied, and in its small circle of light we saw the walls."
+
+    "They were covered in carvings. Not the proud, ordered hieroglyphs of Egypt—these were frantic, gouged into the stone as if by a hand that had been in a hurry, or in terror."
+
+    "Men and women, their faces twisted, their bodies bent. And above them all, a great jaguar, its jaws open, swallowing them one by one."
+
+    n "The first Thorne did not carve these to honour the jaguar. He carved them to *remember* what he had done."
+
+    e "What did he do?"
+
+    "Neith was silent for a long moment. The match burned low, and she lit another."
+
+    n "He made a bargain. The jaguar gave him power—wealth, longevity, a name that would outlast empires. In return, he fed it."
+
+    e "Fed it what?"
+
+    n "His blood. His children. And when his own blood ran thin, the blood of others."
+
+    "The words fell into the cold dark like stones into a well. I felt the weight of them settle in my chest."
+
+    e "And the bargain is still... active?"
+
+    n "It is *hungry*, Eleanor. It has been waiting a very long time for a Thorne to come and honour the old debt."
+
+    "I looked at the carvings again. The jaguar's jaws. The faces. And I understood, with a cold clarity, why the jade jaguar had grown warm in Neith's hand."
+
+    e "You brought me here to feed it."
+
+    "Neith went very still. When she turned to face me, her eyes were bright—not with fear, but with something harder."
+
+    n "I brought you here to *end* it. The only way to break the bargain is for a Thorne to face the jaguar and refuse it. To stand before the hunger and say no."
+
+    e "And if I can't?"
+
+    n "Then it will take you, as it took every Thorne before you. And the bloodline will finally be complete."
+
+    "The match died. In the dark, I felt her hand find mine."
+
+    n "But you are not like them, Eleanor. You unmade a Binding. You faced the Devourer. You are the first Thorne in a thousand years who chose mercy over power."
+
+    n "I believe in you. Even when you do not believe in yourself."
+
+    "Her hand was warm in the cold. And for a moment, the dark did not seem so vast."
+
+    e "Then let's go end it. Together."
+
+    # --- The descent ---
+    "We moved deeper into the temple, and the carvings grew worse."
+
+    "The faces on the walls were no longer just carved—they were *real*. Pressed into the stone as if the people had been pushed through it, their mouths open in silent screams, their hands reaching out of the rock."
+
+    show eleanor_determined at left
+
+    e "Neith. These aren't carvings."
+
+    n "No. They are the ones the jaguar fed on. Their souls are bound to the stone, Eleanor. They have been screaming for a thousand years, and no one has heard them."
+
+    "I stopped. I could feel them—a pressure against my skin, a whisper at the edge of my hearing, a thousand voices all saying the same thing."
+
+    "Help us. Help us. Help us."
+
+    e "We can't leave them like this."
+
+    n "We can't free them yet. Not until the bargain is broken. But when it is—"
+
+    "She did not finish. A sound rose from the dark ahead of us. Not a growl this time. A *breath*. Slow, and deep, and patient."
+
+    "Something was waiting for us in the heart of the temple."
+
+    menu:
+        "Press on — face what waits":
+            $ jaguar_trust += 1
+            "I did not hesitate. I walked toward the sound, and Neith walked beside me."
+            e "Whatever it is, it has waited long enough. Let's not keep it waiting."
+            "She smiled—a real smile, in the dark, and it was the warmest thing I had felt in days."
+
+        "Pause — steady yourselves first":
+            "I stopped, and took a breath. The dark pressed in, and I felt the weight of a thousand trapped souls on my shoulders."
+            e "Neith. If this goes wrong—"
+            n "It won't."
+            e "But if it does. I want you to know—"
+            "She silenced me with a look, and took my hand."
+            n "I know, Eleanor. I know. And I am not going anywhere."
+
+    "We walked on, into the breath, into the dark, and the temple closed around us like a fist."
+
+    scene black
+    with slow_fade
+
     centered "{size=+6}{color=#d4a373}To be continued...{/color}{/size}"
 
     pause 1.5
