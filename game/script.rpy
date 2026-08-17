@@ -393,8 +393,214 @@ label jaguar_confrontation:
     scene black
     with slow_fade
 
-    centered "{size=+6}{color=#d4a373}To be continued...{/color}{/size}"
+    centered "{size=+6}{color=#d4a373}ACT FOUR — THE BINDING{/color}{/size}"
 
     pause 1.5
+
+    # --- The binding ---
+    scene bg jaguar
+    with slow_fade
+
+    "The jaguar's eyes tracked me as I walked toward it, its breath hot and patient, its hunger a pressure against my skin."
+
+    "I stopped before the dais, close enough to see the muscle ripple beneath its black fur, close enough to smell the blood on its breath."
+
+    show eleanor_determined at left
+    with dissolve
+
+    e "You have fed on my family for a thousand years. You have taken their children, their souls, their names. And you have called it a bargain."
+
+    j "It was a bargain. Freely made. Freely kept."
+
+    e "Freely? You took a desperate man and offered him power he could not refuse. That is not a bargain. That is a *trap*."
+
+    "The jaguar's eyes flared, and the chamber grew colder."
+
+    j "And yet you are here, Eleanor Thorne. You came to me. You brought the key. You are the trap, and you have walked into it."
+
+    "I held up my hand. In it, the jade jaguar—warm, alive, its eyes blazing."
+
+    e "I am not the trap, beast. I am the *lock*."
+
+    "I pressed the jade jaguar to my chest, and I felt it sink into me—not into my flesh, but into my *blood*, into the very thing that made me a Thorne."
+
+    "And I spoke the words that had been waiting in my blood for a thousand years."
+
+    "The words the first Thorne had spoken to make the bargain. The words that bound the hunger to the bloodline. The words that only a Thorne could speak, and only a Thorne could break."
+
+    "I spoke them backwards."
+
+    with flash
+
+    "The jaguar screamed."
+
+    "It was not a roar—it was a thousand voices, all of them in agony, all of them *unmaking*. The beast thrashed, its form flickering, its eyes blazing white-hot."
+
+    j "What have you done?! You cannot—you are *blood*—you are *mine*—"
+
+    e "I am not yours. I am not my name. I am Eleanor Thorne, and I choose to end this."
+
+    "The jade jaguar in my chest blazed, and I felt the bargain tear—not with violence, but with a great, shuddering *release*, like a knot finally coming undone."
+
+    "The jaguar's form collapsed inward, and for a moment, I saw what it had been before the hunger—a great, beautiful beast, wild and free, not a monster but a *guardian*."
+
+    "And then it was gone."
+
+    "The chamber fell silent. The walls stopped breathing. The trapped souls, pressed into the stone for a thousand years, began to rise—not as screams, but as light."
+
+    "They passed through me, and through Neith, and out into the jungle, free at last."
+
+    "I stood in the dark, the jade jaguar cold and still in my hand, and I felt the weight of a thousand years lift from the Thorne name."
+
+    show neith_neutral at right
+    with dissolve
+
+    n "You did it, Eleanor. You broke it. You broke *everything*."
+
+    "She was crying. I had never seen Neith cry."
+
+    e "Neith—"
+
+    n "I have waited a century for this. For someone to prove that the bloodline could be more than the hunger. And you—you are the best of us, Eleanor. The very best."
+
+    "I crossed the chamber and took her in my arms. She held me tight, and in the dark, in the silence, in the aftermath of a thousand years of hunger finally ended, we were not two women in a tomb."
+
+    "We were free."
+
+    # --- The endings, keyed to jaguar_trust ---
+    if jaguar_trust >= 3:
+        jump ending_dawn
+    elif jaguar_trust >= 1:
+        jump ending_choice
+    else:
+        jump ending_hunger
+
+    return
+
+label ending_dawn:
+    "We walked out of the temple together, into a dawn that had no end."
+
+    scene bg jungle
+    with slow_fade
+
+    "The jungle was no longer watching. It was *welcoming*. The birds had returned, and the air was sweet with the smell of rain on green."
+
+    "The jade jaguar was cold in my hand, a relic now, its work done. I let it fall into the undergrowth, where it would wait, harmless, for a Thorne who would never come."
+
+    show eleanor_neutral at left
+    show neith_neutral at right
+    with dissolve
+
+    e "It's over. The hunger, the bargain, the curse. All of it."
+
+    n "All of it. The Thorne name is just a name now. No weight. No debt. No hunger."
+
+    "She looked at me, and in the morning light, her eyes were bright and clear."
+
+    n "What will you do now, Eleanor? With no curse to fight, no bloodline to redeem?"
+
+    "I thought about it. For the first time in my life, the future was not a weight to carry. It was a door."
+
+    e "I think... I want to see the world. Not to chase a mystery, or to break a curse. Just to see it. With you."
+
+    "She smiled—a real smile, warm and free."
+
+    n "Then let's go see it. Together."
+
+    "I took her hand, and we walked out of the jungle, into the light, and the SmokeJaguar Trilogy came to an end."
+
+    scene black
+    with slow_fade
+
+    centered "{size=+8}{color=#c8a2c8}The hunger was ended. The bloodline was free. And Eleanor Thorne, at last, was simply Eleanor.{/color}{/size}"
+
+    pause 2.5
+
+    centered "{size=+6}{color=#d4a373}THE END{/color}{/size}"
+
+    pause 2.0
+
+    return
+
+label ending_choice:
+    "We walked out of the temple, and the jungle was quiet."
+
+    scene bg jungle
+    with slow_fade
+
+    "The bargain was broken, but I could feel the hunger still—a faint echo in my blood, a whisper that would never quite leave."
+
+    show eleanor_neutral at left
+    show neith_neutral at right
+    with dissolve
+
+    n "You broke it, Eleanor. But I can feel it in you. The hunger. It's not gone."
+
+    e "I know. It's part of me now. Part of being a Thorne."
+
+    n "It doesn't have to be. You can choose to feed it, or to starve it. Every day, for the rest of your life."
+
+    "I looked at her. At the woman who had walked beside me through the Duat, through the jungle, through the heart of the hunger."
+
+    e "Then I choose to starve it. With you."
+
+    "She took my hand, and I felt the hunger quiet, just a little."
+
+    n "Then we will starve it together. One day at a time."
+
+    "It was not a perfect ending. The curse was not fully gone—it lived on in my blood, a shadow I would carry. But I was not alone in carrying it."
+
+    "And that, I thought, was enough."
+
+    scene black
+    with slow_fade
+
+    centered "{size=+8}{color=#c8a2c8}The hunger was not ended. But it was bound—by love, by choice, by a woman who refused to be her name.{/color}{/size}"
+
+    pause 2.5
+
+    centered "{size=+6}{color=#d4a373}THE END{/color}{/size}"
+
+    pause 2.0
+
+    return
+
+label ending_hunger:
+    "I stood in the dark, the jade jaguar cold in my hand, and I felt the hunger stir."
+
+    "It had not been fully broken. The bargain had torn, but a thread remained—a thin, dark thread, binding the hunger to my blood."
+
+    "I could feel it calling to me. The power. The name. The weight of a thousand years, offered to me, if only I would take it."
+
+    show eleanor_determined at left
+
+    e "Neith. I can feel it. It's still there."
+
+    n "Then you have a choice, Eleanor. The same choice every Thorne has faced. Feed it, or starve it."
+
+    "I looked at the jade jaguar. At the power it offered. At the name it promised."
+
+    "And I thought of my ancestors. Of the hunger that had consumed them. Of the souls pressed into the stone, screaming for a thousand years."
+
+    "I closed my hand around the jade jaguar."
+
+    e "I will not be my name."
+
+    "I threw the jade jaguar into the dark, and it shattered against the stone. The hunger screamed, and then it was gone."
+
+    "It cost me something—I could feel it, a piece of myself, torn away. But I was free."
+
+    "Neith took my hand, and we walked out of the temple, into a dawn that was not kind, but was *mine*."
+
+    scene black
+    with slow_fade
+
+    centered "{size=+8}{color=#c8a2c8}The hunger was ended, but not without cost. Eleanor Thorne gave up a piece of herself to be free. And she would never be quite the same.{/color}{/size}"
+
+    pause 2.5
+
+    centered "{size=+6}{color=#d4a373}THE END{/color}{/size}"
+
+    pause 2.0
 
     return
