@@ -25,6 +25,7 @@ image bg jaguar = Solid("#0a1a0a")     # the jaguar's chamber
 image eleanor_neutral = Solid("#c8a2c8")
 image eleanor_determined = Solid("#c8a2c8")
 image neith_neutral = Solid("#e8d8e8")
+image jaguar_spirit = Solid("#0a1a0a")
 
 # -------------------------------------------------------------------------------------------
 # CUSTOM TRANSITIONS
@@ -273,6 +274,121 @@ label start:
             n "I know, Eleanor. I know. And I am not going anywhere."
 
     "We walked on, into the breath, into the dark, and the temple closed around us like a fist."
+
+    scene black
+    with slow_fade
+
+    centered "{size=+6}{color=#d4a373}ACT THREE — THE HEART{/color}{/size}"
+
+    pause 1.5
+
+    # --- The heart of the temple ---
+    scene bg jaguar
+    with slow_fade
+
+    "The passage opened at last into a vast chamber, and the breath we had been following stopped."
+
+    "It was not a room. It was a *throat*. The walls curved inward like the inside of a great beast, black stone slick with moisture, and at its centre, on a raised dais of obsidian, sat a jaguar."
+
+    "Not a statue. A living thing, huge and black, its fur rippling with muscle, its eyes burning like twin coals in the dark."
+
+    "It did not move. It only watched us, patient as the tide, and I felt the weight of a thousand years of hunger in its gaze."
+
+    show eleanor_neutral at left
+    show neith_neutral at right
+    with dissolve
+
+    e "Neith. It's real."
+
+    n "It was always real, Eleanor. The jaguar is not a spirit. It is the *first* hunger—the thing the first Thorne made his bargain with. It has worn many names, but it has only ever been one thing."
+
+    "The jaguar's head lifted. When it spoke, its voice was not a growl—it was a thousand voices, layered, ancient, and terribly calm."
+
+    show jaguar_spirit at center
+    with dissolve
+
+    j "A Thorne. At last. I have waited so long for the blood to return to me."
+
+    "I stepped forward, putting myself between Neith and the beast."
+
+    e "I am not here to feed you."
+
+    j "No. You are here to *choose*. As every Thorne before you chose. The bloodline is a promise, Eleanor Thorne. A debt. And debts must be paid."
+
+    e "I owe you nothing. My ancestors made that bargain. I did not."
+
+    "The jaguar's eyes flared, and the chamber seemed to grow darker, colder."
+
+    j "You are their blood. Their sin is your inheritance. That is the nature of a bloodline—the weight passes down, whether you accept it or not."
+
+    "It rose, slow and terrible, and I felt the floor tremble beneath its weight."
+
+    j "But I am not without mercy, little Thorne. I will give you the same choice I gave the first of your line."
+
+    j "Feed me, and I will give you everything—power beyond the old gods, a name that will never die, and the woman beside you, spared and made immortal."
+
+    j "Or refuse me, and I will take you both, and the bloodline will end in the dark, as it was always meant to."
+
+    "The words hung in the air like smoke. I felt Neith's hand find mine in the dark, warm and steady."
+
+    n "Eleanor. Whatever you choose—I am with you."
+
+    "The jaguar watched us, its eyes burning, and the chamber held its breath."
+
+    menu:
+        "Refuse the jaguar — break the bargain":
+            $ jaguar_trust += 1
+            "I looked at the beast, and I saw my ancestors in its eyes—every Thorne who had fed it, who had chosen power over mercy, who had let the hunger win."
+            "And I chose differently."
+            e "No. I will not feed you. I will not be my name."
+            "The jaguar roared, and the chamber shook. But I did not flinch."
+            e "The bargain ends here. With me."
+            "Neith's hand tightened on mine, and I felt her strength flow into me."
+            n "Then we end it together."
+            jump jaguar_confrontation
+
+        "Hesitate — feel the weight of the choice":
+            "I stood frozen, the weight of a thousand years pressing down on me. The power the jaguar offered was real—I could feel it, warm and seductive, calling to the Thorne blood in my veins."
+            e "Neith. What if I'm not strong enough?"
+            "She turned me to face her, her hands on my shoulders, her eyes bright in the dark."
+            n "You are the strongest person I have ever known, Eleanor. You unmade a Binding. You faced the Devourer. You are not your ancestors."
+            n "And whatever you choose, I will not leave you."
+            "Her words steadied me. I turned back to the jaguar, and I made my choice."
+            e "I refuse you. The bargain ends here."
+            jump jaguar_confrontation
+
+    return
+
+label jaguar_confrontation:
+    "The jaguar's roar shook the temple to its roots, and the walls began to crack."
+
+    j "You dare! A thousand years of hunger, and you *dare* refuse me!"
+
+    "It lunged, and the world became teeth and shadow."
+
+    "I threw myself aside, dragging Neith with me, and the jaguar's claws raked the stone where we had stood, gouging deep furrows in the obsidian."
+
+    show eleanor_determined at left
+
+    e "Neith! The jade jaguar—the key! What does it do?"
+
+    "Neith held up the pendant, and in the dark, its eyes blazed with a light that was not the jaguar's."
+
+    n "It is the *other* half of the bargain, Eleanor. The first Thorne did not only feed the jaguar—he bound it. This key is the lock. And you are the only one who can turn it."
+
+    e "How?"
+
+    n "You have to make the jaguar *accept* the binding. To face it, and to make it see that you are not its prey—you are its equal."
+
+    "The jaguar circled us, its eyes burning, its breath hot on our skin."
+
+    j "You cannot bind me, little Thorne. I am older than your bloodline. I am the hunger that made it."
+
+    "I looked at Neith. At the jade jaguar in her hand. And I understood what I had to do."
+
+    e "Then I will make you see it. I will show you what a Thorne can be when it chooses mercy over hunger."
+
+    "I stepped forward, alone, toward the beast."
 
     scene black
     with slow_fade
